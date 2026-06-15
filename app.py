@@ -5,7 +5,7 @@ import os
 
 # --- CONFIGURATION ---
 MODEL_PATH = 'rf_model_unified.joblib'
-MODEL_NAME = "Aurafarm AI"
+MODEL_NAME = "Vape Radar"
 SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vT8Oho84O3uIYEEYE2iNub7I5Ktv4mTUteMkdBR4NpBTlJZS0tY2VFXmqM-_XlGIgSaeUIR7VjpnWSZ/pub?output=csv"
 
 st.set_page_config(page_title=MODEL_NAME, page_icon="🚭", layout="wide")
@@ -51,7 +51,7 @@ def load_sensor_data():
 df = load_sensor_data()
 
 # --- 3. DASHBOARD UI ---
-st.title(f"🚭 {MODEL_NAME} Dashboard")
+st.markdown("<h1 style='text-align: center;'>🚭 Vape Radar Dashboard</h1>", unsafe_allow_html=True)
 if df.empty:
     st.warning("No data found.")
     st.stop()
